@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sri Vigneswara Infra</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+
+body{
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+/* Loader */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#0d3b66;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+z-index:9999;
+font-size:30px;
+}
+
+/* Navbar */
+
+.navbar{
+backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.navbar.scrolled{
+background:#0d3b66 !important;
+}
+
+/* Hero Slider */
+
+.carousel-item{
+height:65.0vh;
+background-size:cover;
+background-position:center;
+}
+
+.overlay{
+background:rgba(0,0,0,0.6);
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+}
+
+/* Section */
+
+section{
+padding:80px 0;
+}
+
+/* Services */
+
+.service-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden; /* important for image */
+  transition: all 0.4s ease;
+  background: #fff;
+}
+
+/* Image Styling */
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* keeps image nice */
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effects */
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover img {
+  transform: scale(1.1); /* zoom effect */
+}
+
+/* Title */
+
+.service-card h4 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Counter */
+
+.counter{
+font-size:40px;
+font-weight:bold;
+color:#ffb703;
+}
+
+/* Gallery */
+
+.gallery img{
+height:250px;
+object-fit:cover;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* Testimonials */
+
+.testimonial{
+background:#f8f9fa;
+padding:20px;
+border-radius:10px;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+}
+
+/* Footer */
+
+footer{
+background:#0d3b66;
+color:white;
+padding:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="loader">Loading...</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Sri Vigneswara Infra</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO SLIDER -->
+
+<div id="home" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');">
+<div class="overlay">
+<div>
+<h1>Sri Vigneswara Infra</h1>
+<p>Reliable Construction Services</p>
+<a href="#contact" class="btn btn-warning">Contact Us</a>
+</div>
+</div>
+</div>
+
+<div class="carousel-item" style="background-image:url('images/sand.jpg');">
+<div class="overlay">
+<h1>Sand & Gravel Supply</h1>
+</div>
+</div>
+
+<div class="carousel-item" style="background-image:url('images/Excavator.avif');">
+<div class="overlay">
+<h1>JCB Excavation Works</h1>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our Services</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card service-card p-3">
+          <img src="images/sandservice.jpg" class="img-fluid mb-3" alt="Sand Supply">
+          <h4>Sand Supply</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card p-3">
+          <img src="images/gravel.jpeg" class="img-fluid mb-3" alt="Gravel Supply">
+          <h4>Gravel Supply</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card service-card p-3">
+          <img src="images/Excavator.avif" class="img-fluid mb-3" alt="JCB Works">
+          <h4>JCB Works</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COUNTER -->
+
+<section class="bg-dark text-center text-white">
+<div class="container">
+<div class="row">
+
+<div class="col-md-4">
+<div class="counter" data-target="500">0</div>
+<p>Projects Completed</p>
+</div>
+
+<div class="col-md-4">
+<div class="counter" data-target="300">0</div>
+<p>Happy Clients</p>
+</div>
+
+<div class="col-md-4">
+<div class="counter" data-target="10">0</div>
+<p>Years Experience</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+<div class="container text-center">
+<h2 class="fw-bold mb-4">About Us</h2>
+
+<p>
+Sri Vigneswara Infra provides trusted sand, gravel and excavation services with professional quality.
+</p>
+
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="bg-light">
+<div class="container text-center">
+
+<h2 class="fw-bold mb-4">Client Feedback</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="testimonial">
+<p>"Best sand supplier in the area!"</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="testimonial">
+<p>"Reliable JCB services and on-time delivery."</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="testimonial">
+<p>"Good quality gravel and professional work."</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+<div class="container text-center">
+
+<h2 class="fw-bold mb-4">Contact Us</h2>
+
+<p>Phone: +91 8500221037</p>
+<p>Email: tejeshjamalapura@email.com</p>
+<p>Address: Vellagapudi,Thulluru,Guntur district</p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="text-center">
+
+<h5>Sri Vigneswara Infra</h5>
+
+<hr>
+
+<p>Developed by <b>Tejesh Jamalapurapu</b></p>
+
+</footer>
+
+<!-- WhatsApp -->
+
+<a href="https://wa.me/918500221037" class="whatsapp">
+<i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Scripts -->
+
+<script>
+
+// Loader
+window.onload = () => document.getElementById("loader").style.display="none";
+
+// Navbar scroll
+window.addEventListener("scroll",()=>{
+document.querySelector(".navbar").classList.toggle("scrolled",window.scrollY>50)
+});
+
+// Counter Animation
+
+let counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+let update = ()=>{
+let target = +counter.getAttribute('data-target');
+let count = +counter.innerText;
+
+let increment = target/100;
+
+if(count < target){
+counter.innerText = Math.ceil(count + increment);
+setTimeout(update,20);
+}else{
+counter.innerText = target;
+}
+}
+
+update();
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
